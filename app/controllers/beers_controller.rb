@@ -9,7 +9,7 @@ class BeersController < ApplicationController
     end
 
     def create
-      @bean = Beer.new(params.require(:beer).permit(:name, :brewery, :style, :price))
+      @beer = Beer.new(params.require(:beer).permit(:name, :brewery, :style, :price))
 
       if @beer.save
         redirect_to beer_path
