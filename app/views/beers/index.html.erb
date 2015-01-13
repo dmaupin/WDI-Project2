@@ -1,0 +1,54 @@
+
+<% @beers.each do |beer| %>
+
+<br/>
+
+<body>
+<!-- 	<div class="header"></div> -->
+	
+	<div class="headlineone">
+		BETA - FOR THE BEST EXPERIENCE VIEW IN CHROME	
+	</div>
+
+	<div class="logo"><img src="<%= asset_path('KANPAI_APP_LOGO_COMP-1a.svg') %>" alt="KANPAI!"></div>
+
+	<div class="wishlist">
+
+		<hr class="divider-horizontal"/>
+
+		<div class="section-head">
+			WISH LIST		<%= link_to 'Add Beer', '/beers/new' %>
+		</div>
+
+		<div class="wishlist-content">
+			  <%= beer.name.upcase %> <em>Brewery:</em> <%= beer.brewery %> <em> Style: </em> <%= beer.style %> <em> Cost: </em> $<%= beer.price %>
+		</div>
+	</div>	
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<div id="review">
+	<div class="reviews">
+
+		<hr class="divider-horizontal"/>
+
+		<div class="section-head">
+			REVIEWS	
+		</div>
+	<div class="reviewtable">
+		<div class="review-container">
+			<div class="review">TRAPISTTE 8</div>
+				<br/>
+	</div>		
+				
+		</div>
+		<div class="review-container">
+			<div class="review">HIGH LIFE</div>
+				<br/>
+			
+				
+		</div>
+
+	</div>
+
+</body>
+
+<% end %>

@@ -1,0 +1,99 @@
+// Place all the styles related to the beers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-stack: Helvetica, serif;
+$primary-color: #445871;
+$bakground: #bfbfbf;
+
+body {
+  font: 150% $font-stack;
+  color: $primary-color;
+  background-color: $bakground;
+}
+
+.beers {
+	font: 125% $font-stack;
+}
+
+// 
+
+.header {
+	background-color: #bfbfbf;
+	width: 100%;
+	height: 30px;
+	top: 0;
+}
+
+.logo {
+	width: 50%;
+	position: block;
+	margin-left: 25%;
+	margin-top: 20px;
+}
+
+.headlineone {
+	font-family: Nanami-Rounded-Bld;
+	font-weight: normal;
+	font-style: normal;
+	color: #bfbfbf;
+	font-size: 16px;
+	margin-left: 10%;
+}
+
+.divider-horizontal {
+	width: 80%;
+	border: solid black 1px;
+	margin-top: 12px;
+}
+
+.section-head {
+	font-family: Nanami-Rounded-Bld;
+	font-weight: normal;
+	font-style: normal;
+	color: black;
+	font-size: 16px;
+	margin-left: 10%;
+}
+
+.wishlist-content {
+	background-color: white;
+	font: 75% $font-stack;
+	width: 80%;
+	display: block;
+	margin-left: 10%;
+}
+
+.reviewtable {
+	margin-left: 0 auto;
+}
+
+.review-container {
+	padding: 10px;
+	margin-left: 10%;
+	display: inline-block;
+}
+
+.review {
+	font-family: Nanami-Rounded-Bld;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 28px;
+	color: black;
+	background-color: white;
+	width: 350px;
+	height: 550px;
+	padding: 10px;
+}
+
+.colors {
+    -webkit-appearance: none;
+    background-color: #ffffff;
+    width: 115px;
+    height:20px;
+    padding-left: 15px;
+    margin-top: 10px;
+    position: relative;
+    display: block;
+    user-select: none;
+}
