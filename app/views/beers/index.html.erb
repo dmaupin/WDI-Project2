@@ -11,16 +11,21 @@
 	<hr class="divider-horizontal"/>
 
 	</div>
+
+	<tbody>
 	<% @beers.each do |beer| %>
 		<br/>
-		<table class="wishlist-content">
+			<table class="wishlist-content">
 			  <tr>
 			  	<td class="bold"><%= beer.name.upcase %></td>
 			  	<td class="light"><%= beer.brewery %></td>
 			  	<td class="light"><%= beer.style %></td>
-			  	<td class="light">$<%= beer.price %></td>
+			  	<!-- <td class="light">$<%= beer.price %></td> -->
+			  	<td class="bold button"><%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %></td>
+			  	<td><input type="checkbox" value="false"/></td>
 			  </tr>
-		</table>
+			</table>
+		</tbody>
 	<% end %>
 </div>
 
@@ -31,14 +36,29 @@
 	<br/><br/><br/>
 	<div class="section-head"> REVIEWS </div>
 	<hr class="divider-horizontal"/>
-	<div class="reviews">
+
+	<div>
 		
 	<div class="reviewtable">
 	<% @beers.each do |beer| %>
 		<div class="review-container">
-			<div class="review"><%= beer.name.upcase %></div>
-				<br/>
-					</div>		
-				</div>
+			<div class="review">
+			<div class="bold"><%= beer.name.upcase %></div><br/>
+			<div class="light">
+			<%= beer.brewery  %><br/>
+			<%= beer.style %><br/>
+			<%= beer.ABV %><br/>
+			<%= beer.rating %><br/>
+			<%= beer.price %><br/>
+			<%= beer.taste %><br/>
+			<%= beer.appearance %><br/>
+			</div>
+
+			</div>
+			<br/>
+			</div>		
+	</div>
+		
 		<% end %>
+
 	</div>

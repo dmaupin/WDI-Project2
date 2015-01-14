@@ -7,9 +7,9 @@ $primary-color: #000000;
 $bakground: #f3f3f3;
 $font-light: Nanami-Rounded-Lt, Helvetica, sans-serif;
 
+// global styles
 
 body {
-  // font: 150% $font-stack;
   color: $primary-color;
   background-color: $bakground;
 }
@@ -50,6 +50,18 @@ body {
 	appearance: none;
 	margin-right: 10%;
 	display: inline;
+}
+
+.button {
+	-webkit-appearance: none;
+	text-decoration: none;
+	appearance: none;
+}
+
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .section-head {
@@ -101,23 +113,23 @@ body {
 	font: 100% $font-light;
 	width: 80%;
 	margin-left: 8.5%;
+	margin-top: 5px;
 }
 
 .reviewtable {
 	margin-left: 0 auto;
+	display: block;
 }
 
 .review-container {
 	padding: 10px;
 	margin-left: 10%;
-	display: inline-block;
 }
 
 .review {
 	font-family: Nanami-Rounded-Bld;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 28px;
+	letter-spacing: 2px;
+	font-size: 100%;
 	color: black;
 	background-color: white;
 	width: 350px;

@@ -1,5 +1,5 @@
-   <div class="banner">
-   	<h1>Add a new beer!</h1>
+   <div class="bold center-block">
+   	<h1 class="">ADD A NEW BREW!</h1>
    </div>
 
     <%= form_for @beer do |f| %>
@@ -9,7 +9,7 @@
         Style: <%= f.text_field :style %>
         Price: <%= f.text_field :price %>
 
-        <%= f.submit "Add beer!" %>
+        <div class="bold"><%= f.submit "Add beer!" %></div>
 
     <% end %>
 

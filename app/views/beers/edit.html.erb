@@ -1,0 +1,21 @@
+<div class="reviewtable">
+	<% @beers.each do |beer| %>
+		<div class="review-container">
+			<div class="review">
+			<div class="bold"><%= beer.name.upcase %></div><br/>
+			<div class="light">
+			<%= f.text_field :brewery  %><br/>
+			<%= f.text_field :style %><br/>
+			<%= f.number_field :ABV %><br/>
+			<%= f.number_field :rating %><br/>
+			<%= f.number_field :price %><br/>
+			<%= f.text_field :taste %><br/>
+			<%= f.text_field :appearance %><br/>
+			</div>
+			</div>
+			<br/>
+			</div>		
+	</div>
+
+	<%= f.submit "Update" %><%= link_to 'Update Review' beers_path %>
+	<% end %>
