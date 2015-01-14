@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// variables
+
 $font-stack: Nanami-Rounded-Bld, Helvetica, sans-serif;
 $primary-color: #000000;
 $bakground: #f3f3f3;
@@ -53,9 +55,7 @@ body {
 }
 
 .button {
-	-webkit-appearance: none;
-	text-decoration: none;
-	appearance: none;
+	// @include button(#ff0000);
 }
 
 .center-block {
