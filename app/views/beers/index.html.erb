@@ -1,29 +1,33 @@
 
 	
 <!-- Section 1 - Wish List -->
+<br/>
+<div class="section-head">
+			WISH LIST <div class="links"><%= link_to '+', '/beers/new' %></div>
+</div>
+<hr class="divider-horizontal"/>
 
 <div class="wishlist">
-		
-	<div class="section-head">
-			WISH LIST <div class="links"><%= link_to '+', '/beers/new' %>
-	</div>
-
-	<hr class="divider-horizontal"/>
-
-	</div>
 
 	<tbody>
+		<table class="wishlist-content">
+			<br/>
+			  	<td class="light table-labels">Name</td>
+			  	<td class="light table-labels">Brewery</td>
+			  	<td class="light table-labels">Style</td>
+			  	<!-- <td class="light">$</td> -->
+			  	<td class="light table-labels">Delete</td>
+			  	<td class="light table-labels">Review</td>
+			</table>
 	<% @beers.each do |beer| %>
 		<br/>
 			<table class="wishlist-content">
-			  <tr>
 			  	<td class="bold"><%= beer.name.upcase %></td>
 			  	<td class="light"><%= beer.brewery %></td>
 			  	<td class="light"><%= beer.style %></td>
 			  	<!-- <td class="light">$<%= beer.price %></td> -->
 			  	<td class="bold button"><%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %></td>
 			  	<td><input type="checkbox" value="false"/></td>
-			  </tr>
 			</table>
 		</tbody>
 	<% end %>
@@ -33,32 +37,33 @@
 <!-- Section 2 - Reviews -->
 
 
-	<br/><br/><br/>
+	<br/><br/>
 	<div class="section-head"> REVIEWS </div>
 	<hr class="divider-horizontal"/>
-
-	<div>
 		
 	<div class="reviewtable">
 	<% @beers.each do |beer| %>
 		<div class="review-container">
 			<div class="review">
-			<div class="bold"><%= beer.name.upcase %></div><br/>
-			<div class="light">
-			<%= beer.brewery  %><br/>
-			<%= beer.style %><br/>
-			<%= beer.ABV %><br/>
-			<%= beer.rating %><br/>
-			<%= beer.price %><br/>
-			<%= beer.taste %><br/>
-			<%= beer.appearance %><br/>
+				<div class="bold"><%= beer.name.upcase %></div><br/>
+				<hr class="divider-horizontal-two"/><br/>
+				<div class="light">
+				<%= beer.brewery  %><br/>
+				<%= beer.style %><br/>
+				<%= beer.ABV %><br/>
+				<%= beer.rating %><br/>
+				$<%= beer.price %><br/>
+				<%= beer.taste %><br/>
+				<%= beer.appearance %><br/>
+				</div class="link bottom">
+				<%= link_to "REVISE", beer, method: :update %>
 			</div>
-
-			</div>
-			<br/>
-			</div>		
+		</div>
+		<% end %>
 	</div>
 		
-		<% end %>
+		
 
-	</div>
+
+
+

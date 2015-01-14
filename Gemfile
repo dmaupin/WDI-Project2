@@ -24,6 +24,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mongoid', '4.0.0'
 # neat grid framework
 gem 'neat', '~> 1.7.1'
+# bourbon framework
+gem 'bourbon'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

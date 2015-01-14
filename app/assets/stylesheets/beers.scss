@@ -8,6 +8,7 @@ $font-stack: Nanami-Rounded-Bld, Helvetica, sans-serif;
 $primary-color: #000000;
 $bakground: #f3f3f3;
 $font-light: Nanami-Rounded-Lt, Helvetica, sans-serif;
+$grid-columns: 3 !default;
 
 // global styles
 
@@ -49,13 +50,17 @@ body {
 // Global Styles
 
 .links {
+	-webkit-appearance: none;
 	appearance: none;
 	margin-right: 10%;
 	display: inline;
+	user-select: none;
 }
 
 .button {
-	// @include button(#ff0000);
+	-webkit-appearance: none;
+	text-decoration: none;
+	appearance: none;
 }
 
 .center-block {
@@ -66,9 +71,7 @@ body {
 
 .section-head {
 	font-family: $font-stack, bold;
-	font-weight: normal;
-	font-style: normal;
-	color: black;
+	color: #000000;
 	margin-left: 10%;
 }
 
@@ -98,41 +101,62 @@ body {
 	margin-top: 12px;
 }
 
+.bottom {
+	bottom: 10px;
+}
+
 // wishlist
 
 .wishlist {
+
+	@include outer-container(100%);
+
 	td {
 		display: inline;
 		margin-left: 15px;
-		background-color: white;
 		padding: 10px;
+		text-align: left;
 	}
 }
 
 .wishlist-content {
 	font: 100% $font-light;
 	width: 80%;
-	margin-left: 8.5%;
-	margin-top: 5px;
-}
-
-.reviewtable {
-	margin-left: 0 auto;
-	display: block;
-}
-
-.review-container {
+	background-color: white;
 	padding: 10px;
 	margin-left: 10%;
 }
 
+.table-labels {
+	background-color: none;
+}
+
+// reviews
+
+.reviewtable {
+	@include outer-container(80%);
+
+	.review-container {
+		margin-top: 20px;
+		@include span-columns(3);
+	}
+
+}
+
 .review {
-	font-family: Nanami-Rounded-Bld;
+	font-family: $font-stack;
 	letter-spacing: 2px;
 	font-size: 100%;
 	color: black;
 	background-color: white;
-	width: 350px;
-	height: 550px;
-	padding: 10px;
+	height: 400px;
+	padding: 20px;
 }
+
+.divider-horizontal-two {
+	width: 100%;
+	border: solid black 1px;
+	margin-top: 12px;
+}
+
+
