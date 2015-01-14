@@ -1,46 +1,43 @@
-	<div class="headlineone">
-		BETA - FOR THE BEST EXPERIENCE VIEW IN CHROME	
-	</div>
 
-	<div class="logo"><img src="<%= asset_path('KANPAI_APP_LOGO_COMP-1a.svg') %>" alt="KANPAI!"></div>
 	
 <!-- Section 1 - Wish List -->
 
 		<div class="wishlist">
-		<hr class="divider-horizontal"/>
+		
 		<div class="section-head">
 			WISH LIST <div class="links"><%= link_to '+', '/beers/new' %></div>
-		</div>
+
+		<hr class="divider-horizontal"/>
+
+			</div>
 		<% @beers.each do |beer| %>
 		<br/>
-		<div class="wishlist-content">
-			  <ul>
-			  	<li><%= beer.name.upcase %></li>
-			  	<li><%= beer.brewery %></li>
-			  	<li><%= beer.style %></li>
-			  	<li>$<%= beer.price %></li>
-			  </ul>
-		</div>
+		<table class="wishlist-content">
+			  <tr>
+			  	<td class="bold"><%= beer.name.upcase %></td>
+			  	<td class="light"><%= beer.brewery %></td>
+			  	<td class="light"><%= beer.style %></td>
+			  	<td class="light">$<%= beer.price %></td>
+			  </tr>
+		</table>
 		<% end %>
 	</div>
 
+
 <!-- Section 2 - Reviews -->
 
+
+	<br/><br/><br/>
+	<div class="section-head"> REVIEWS </div>
 	<hr class="divider-horizontal"/>
 	<div class="reviews">
-		<div class="section-head">
-			REVIEWS	
-		</div>
+		
 	<div class="reviewtable">
+	<% @beers.each do |beer| %>
 		<div class="review-container">
-			<div class="review">TRAPISTTE 8</div>
+			<div class="review"><%= beer.name.upcase %></div>
 				<br/>
-	</div>		
-				
-		</div>
-		<div class="review-container">
-			<div class="review">HIGH LIFE</div>
-				<br/>
-		</div>
-
+					</div>		
+				</div>
+		<% end %>
 	</div>

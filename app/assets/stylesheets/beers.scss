@@ -5,6 +5,8 @@
 $font-stack: Nanami-Rounded-Bld, Helvetica, sans-serif;
 $primary-color: #000000;
 $bakground: #f3f3f3;
+$font-light: Nanami-Rounded-Lt, Helvetica, sans-serif;
+
 
 body {
   // font: 150% $font-stack;
@@ -20,6 +22,26 @@ body {
 	font-family: 'Nanami-Rounded-Bld';
 	src: font-url('webfonts/2D07A4_3_0.eot');
 	src: font-url('webfonts/2D07A4_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D07A4_3_0.woff2') format('woff2'),url('webfonts/2D07A4_3_0.woff') format('woff'),url('webfonts/2D07A4_3_0.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Nanami-Rounded-Lt';
+	src: font-url('webfonts/2D07A4_9_0.eot');
+	src: font-url('webfonts/2D07A4_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D07A4_9_0.woff2') format('woff2'),url('webfonts/2D07A4_9_0.woff') format('woff'),url('webfonts/2D07A4_9_0.ttf') format('truetype');
+}
+
+// Typography
+
+.light {
+	font: 105% $font-light;
+	display: inline;
+	letter-spacing: 2px;
+}
+
+.bold {
+	font: 105% $font-stack;
+	display: inline;
+	letter-spacing: 2px;
 }
 
 // Global Styles
@@ -67,18 +89,18 @@ body {
 // wishlist
 
 .wishlist {
-	li {
+	td {
 		display: inline;
 		margin-left: 15px;
 		background-color: white;
-		padding: 5px;
+		padding: 10px;
 	}
 }
 
 .wishlist-content {
-	font: 100% $font-stack;
+	font: 100% $font-light;
 	width: 80%;
-	margin-left: 5%;
+	margin-left: 8.5%;
 }
 
 .reviewtable {
@@ -101,16 +123,4 @@ body {
 	width: 350px;
 	height: 550px;
 	padding: 10px;
-}
-
-.colors {
-    -webkit-appearance: none;
-    background-color: #ffffff;
-    width: 115px;
-    height:20px;
-    padding-left: 15px;
-    margin-top: 10px;
-    position: relative;
-    display: block;
-    user-select: none;
 }
