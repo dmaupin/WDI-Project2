@@ -8,4 +8,7 @@ class Beer
   field :appearance, type: String
   field :rating, type: Integer
   field :ABV, type: Float
+
+  belongs_to :user
+
 end

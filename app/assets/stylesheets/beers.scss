@@ -4,12 +4,11 @@
 
 // variables
 
-$font-stack: Nanami-Rounded-Bld, Helvetica, sans-serif;
+$font-stack: Nanami-Bold, Nanami-Rounded-Bld, Helvetica, sans-serif;
 $primary-color: #000000;
-$bakground: #f3f3f3;
-$font-light: Nanami-Rounded-Lt, Helvetica, sans-serif;
-$grid-columns: 3 !default;
-$gutter: golden-ratio(1em, 1) !default;
+$bakground: #f8f8f8;
+$font-light: Nanami-Light, Nanami-Rounded-Lt, Helvetica, sans-serif;
+$grid-columns: 12 !default;
 
 // global styles
 
@@ -20,7 +19,7 @@ body {
 
 // fonts
 
-@import url("//hello.myfonts.net/count/2d07a4");
+// @import url("//hello.myfonts.net/count/2d07a4");
 
 @font-face {
 	font-family: 'Nanami-Rounded-Bld';
@@ -34,6 +33,20 @@ body {
 	src: font-url('webfonts/2D07A4_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D07A4_9_0.woff2') format('woff2'),url('webfonts/2D07A4_9_0.woff') format('woff'),url('webfonts/2D07A4_9_0.ttf') format('truetype');
 }
 
+@import url("//hello.myfonts.net/count/2d1133");
+
+  
+@font-face {font-family: 'Nanami-Bold';
+	src: font-url('webfonts/2D1133_1_0.eot');
+	src: font-url('webfonts/2D1133_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D1133_1_0.woff2') format('woff2'),url('webfonts/2D1133_1_0.woff') format('woff'),url('webfonts/2D1133_1_0.ttf') format('truetype');
+}
+  
+@font-face {
+	font-family: 'Nanami-Light';
+	src: font-url('webfonts/2D1133_A_0.eot');
+	src: font-url('webfonts/2D1133_A_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D1133_A_0.woff2') format('woff2'),url('webfonts/2D1133_A_0.woff') format('woff'),url('webfonts/2D1133_A_0.ttf') format('truetype');
+}
+
 // Typography
 
 .light {
@@ -43,15 +56,12 @@ body {
 }
 
 .bold {
-	font: 105% $font-stack;
+	font: 105% $font-stack, Nanami-Bold;
 	display: inline;
 	letter-spacing: 2px;
 }
 
 // Global Styles
-
-.logo {
-}
 
 .links {
 	-webkit-appearance: none;
@@ -84,19 +94,20 @@ body {
 }
 
 .logo {
-	width: 50%;
+	width: 60%;
 	position: block;
-	margin-left: 25%;
+	margin-left: 20%;
 	margin-top: 20px;
 }
 
 .headlineone {
-	font-family: $font-stack ,Nanami-Rounded-Bld;
+	font-family: $font-stack ,Nanami-Bold;
 	font-weight: normal;
 	font-style: normal;
 	color: #bfbfbf;
 	font-size: 16px;
 	margin-left: 10%;
+
 }
 
 .divider-horizontal {
@@ -114,6 +125,7 @@ body {
 .wishlist {
 
 	@include outer-container(100%);
+	padding-top: 5px;
 
 	td {
 		display: inline;
@@ -134,6 +146,7 @@ body {
 	background-color: white;
 	padding: 10px;
 	margin-left: 10%;
+	margin-top: -10px;
 }
 
 .table-labels {
