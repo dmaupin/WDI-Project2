@@ -13,20 +13,20 @@
 	<tbody>
 		<table class="wishlist-content">
 			<br/>
-			  	<td class="light table-labels">Name</td>
-			  	<td class="light table-labels">Brewery</td>
-			  	<td class="light table-labels">Style</td>
-			  	<!-- <td class="light">$</td> -->
-			  	<td class="light table-labels">Delete</td>
-			  	<td class="light table-labels">Review</td>
+			  	<td class="l1 table-labels">Name</td>
+			  	<td class="l1 table-labels">Brewery</td>
+			  	<td class="l1 table-labels">Style</td>
+			  	<!-- <td class="l1">$</td> -->
+			  	<td class="l1 table-labels">Delete</td>
+			  	<td class="l1 table-labels">Review</td>
 			</table>
 	<% @beers.each do |beer| %>
 		<br/>
 			<table class="wishlist-content">
-			  	<td class="bold"><%= beer.name.upcase %></td>
-			  	<td class="light"><%= beer.brewery %></td>
-			  	<td class="light"><%= beer.style %></td>
-			  	<!-- <td class="light">$<%= beer.price %></td> -->
+			  	<td class="b1"><%= beer.name.upcase %></td>
+			  	<td class="l1"><%= beer.brewery %></td>
+			  	<td class="l1"><%= beer.style %></td>
+			  	<!-- <td class="l1">$<%= beer.price %></td> -->
 			  	<td class="bold button"><%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %></td>
 			  	<td><input type="checkbox" value="false"/></td>
 			</table>
@@ -48,21 +48,28 @@
 			<div class="review">
 				<div class="bold"><%= beer.name.upcase %></div><br/>
 				<hr class="divider-horizontal-two"/><br/>
-				<div class="light">
-				<%= beer.brewery  %><br/>
-				<%= beer.style %><br/>
-				<%= beer.ABV %><br/>
-				<%= beer.rating %><br/>
-				$<%= beer.price %><br/>
-				<%= beer.taste %><br/>
-				<%= beer.appearance %><br/>
+				<div class="l1">
+				Brewery:<br/>
+				<span class="b1"><%= beer.brewery  %><br/></span>
+				Style:<br/>
+				<span class="b1"><%= beer.style %><br/></span>
+				ABV%: 
+				<span class="b1"><%= beer.ABV %><br/></span>
+				Rating: 
+				<span class="b1"><%= beer.rating %><br/></span>
+				Price: $
+				<span class="b1"><%= beer.price %><br/></span>
+				Taste:<br/>
+				<span class="b1"><%= beer.taste %><br/></span>
+				Appearance:<br/>
+				<span class="b1"><%= beer.appearance %><br/></span>
 				</div class="link bottom">
 				<%= link_to 'REVISE', edit_beer_path(beer) %> | <%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %>
 			</div>
 		</div>
 		<% end %>
 	</div>
-	<br/>
+	<br/><br/>
 	<hr class="divider-horizontal"/>
 		
 		

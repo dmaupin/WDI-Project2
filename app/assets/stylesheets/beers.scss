@@ -19,7 +19,7 @@ body {
 
 // fonts
 
-// @import url("//hello.myfonts.net/count/2d07a4");
+@import url("//hello.myfonts.net/count/2d07a4");
 
 @font-face {
 	font-family: 'Nanami-Rounded-Bld';
@@ -49,13 +49,13 @@ body {
 
 // Typography
 
-.light {
+.l1 {
 	font: 105% $font-light;
 	display: inline;
 	letter-spacing: 2px;
 }
 
-.bold {
+.b1 {
 	font: 105% $font-stack, Nanami-Bold;
 	display: inline;
 	letter-spacing: 2px;

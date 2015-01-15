@@ -1,20 +1,15 @@
-<div class="reviewtable">
-	<% @beers.each do |beer| %>
-		<div class="review-container">
-			<div class="review">
-			<div class="bold"><%= beer.name.upcase %></div><br/>
-			<div class="light">
-			<%= f.text_field :brewery  %><br/>
-			<%= f.text_field :style %><br/>
-			<%= f.number_field :ABV %><br/>
-			<%= f.number_field :rating %><br/>
-			<%= f.number_field :price %><br/>
-			<%= f.text_field :taste %><br/>
-			<%= f.text_field :appearance %><br/>
-			</div>
-			</div>
-			<br/>
-			</div>
-			<%= f.submit "Update" %><%= link_to 'Update Review', beers_path(beers) %>
+<div class="bold center-block">
+<h1>REVIEW</h1>
+
+			<%= form_for @beer do |f| %>
+			Brewery: <%= f.text_field :brewery  %><br/>
+			Style: <%= f.text_field :style %><br/>
+			ABV: <%= f.number_field :ABV %><br/>
+			Rating: <%= f.number_field :rating %><br/>
+			Price: <%= f.number_field :price %><br/>
+			Taste: <%= f.text_field :taste %><br/>
+			Apperance: <%= f.text_field :appearance %><br/>
+
+			<%= f.submit "Update" %>
 	<% end %>				
 </div>
