@@ -56,11 +56,13 @@
 				<%= beer.taste %><br/>
 				<%= beer.appearance %><br/>
 				</div class="link bottom">
-				<%= link_to "REVISE", beer, method: :update %>
+				<%= link_to 'REVISE', edit_beer_path(beer) %> | <%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %>
 			</div>
 		</div>
 		<% end %>
 	</div>
+	<br/>
+	<hr class="divider-horizontal"/>
 		
 		
 

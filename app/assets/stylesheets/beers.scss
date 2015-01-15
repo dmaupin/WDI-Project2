@@ -9,6 +9,7 @@ $primary-color: #000000;
 $bakground: #f3f3f3;
 $font-light: Nanami-Rounded-Lt, Helvetica, sans-serif;
 $grid-columns: 3 !default;
+$gutter: golden-ratio(1em, 1) !default;
 
 // global styles
 
@@ -48,6 +49,9 @@ body {
 }
 
 // Global Styles
+
+.logo {
+}
 
 .links {
 	-webkit-appearance: none;
@@ -117,6 +121,11 @@ body {
 		padding: 10px;
 		text-align: left;
 	}
+
+	tr {
+		width: 33%;
+	}
+
 }
 
 .wishlist-content {
@@ -138,7 +147,7 @@ body {
 
 	.review-container {
 		margin-top: 20px;
-		@include span-columns(3);
+		@include span-columns(4);
 	}
 
 }

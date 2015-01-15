@@ -1,5 +1,7 @@
 class BeersController < ApplicationController
 
+  # before_action :authorize
+
 	  def index
       @beers = Beer.all
     end
@@ -18,9 +20,9 @@ class BeersController < ApplicationController
       end
     end
 
-    def show
-      @beer = Beer.find(params[:id])
-    end
+    # def show
+    #   @beer = Beer.find(params[:id])
+    # end
 
     def edit
       @beer = Beer.find(params[:id])    
@@ -31,7 +33,8 @@ class BeersController < ApplicationController
       if @beer.update_attributes(params.require(:beer).permit(:name, :brewery, :style, :ABV, :price, :rating, :taste, :appearance))
       redirect_to beers_path
       else
-      render "edit"
+        # "edit"?
+      render "/edit" 
       end
     end
 

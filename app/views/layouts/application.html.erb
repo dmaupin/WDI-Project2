@@ -9,7 +9,14 @@
 <body>
 
 	<div class="headlineone">
-		BETA - FOR THE BEST EXPERIENCE VIEW IN CHROME	
+<!-- 		BETA - FOR THE BEST EXPERIENCE VIEW IN CHROME	 -->
+	
+	<% if current_user %>
+	Logged in as <%= current_user.first_name.upcase + " " + current_user.last_name.upcase %> | <%= link_to "LOGOUT", logout_path %>
+	<% else %>
+	<%= link_to "LOGIN", login_path %> | <%= link_to "SIGN UP", signup_path %>
+	<% end %>
+
 	</div>
 
 	<div class="logo"><img src="<%= asset_path('KANPAI_APP_LOGO_COMP-1a.svg') %>" alt="KANPAI!"></div>
