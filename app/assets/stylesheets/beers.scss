@@ -4,14 +4,11 @@
 
 // variables
 
-$font-stack: Nanami-Bold, Nanami-Rounded-Bld, Helvetica, sans-serif,;
+$font-stack: Nanami-Bold, Helvetica, sans-serif,;
+$font-book: Nanami-Book, Helvetica, sans-serif,;
 $primary-color: #000000;
 $background: #fafafa;
-$font-light: Nanami-Light, Nanami-Rounded-Lt, Helvetica, sans-serif;
-// $grid-columns: 12 !default;
-// $visual-grid: true !default;
-// $visual-grid-color: lighten(#FFF0E8, 3%);
-
+$font-light: Nanami-Light, Helvetica, sans-serif;
 
 // global styles
 
@@ -22,45 +19,51 @@ body {
 
 // fonts
 
-@font-face {
-	font-family: 'Nanami-Rounded-Bld';
-	src: font-url('webfonts/2D07A4_3_0.eot');
-	src: font-url('webfonts/2D07A4_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D07A4_3_0.woff2') format('woff2'),url('webfonts/2D07A4_3_0.woff') format('woff'),url('webfonts/2D07A4_3_0.ttf') format('truetype');
-}
+// nanami
 
 @font-face {
-	font-family: 'Nanami-Rounded-Lt';
-	src: font-url('webfonts/2D07A4_9_0.eot');
-	src: font-url('webfonts/2D07A4_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D07A4_9_0.woff2') format('woff2'),url('webfonts/2D07A4_9_0.woff') format('woff'),url('webfonts/2D07A4_9_0.ttf') format('truetype');
+	font-family: 'Nanami-Bold';
+	src: url('webfonts/2D14BF_0_0.eot');
+	src: url('webfonts/2D14BF_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D14BF_0_0.woff2') format('woff2'),url('webfonts/2D14BF_0_0.woff') format('woff'),url('webfonts/2D14BF_0_0.ttf') format('truetype');
 }
+ 
   
-// @font-face {font-family: 'Nanami-Bold';
-// 	src: font-url('webfonts/2D1133_1_0.eot');
-// 	src: font-url('webfonts/2D1133_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D1133_1_0.woff2') format('woff2'),url('webfonts/2D1133_1_0.woff') format('woff'),url('webfonts/2D1133_1_0.ttf') format('truetype');
-// }
+@font-face {
+	font-family: 'Nanami-Book';
+	src: url('webfonts/2D14BF_1_0.eot');
+	src: url('webfonts/2D14BF_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D14BF_1_0.woff2') format('woff2'),url('webfonts/2D14BF_1_0.woff') format('woff'),url('webfonts/2D14BF_1_0.ttf') format('truetype');
+}
+ 
   
-// @font-face {
-// 	font-family: 'Nanami-Light';
-// 	src: font-url('webfonts/2D1133_A_0.eot');
-// 	src: font-url('webfonts/2D1133_A_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D1133_A_0.woff2') format('woff2'),url('webfonts/2D1133_A_0.woff') format('woff'),url('webfonts/2D1133_A_0.ttf') format('truetype');
-// }
+@font-face {
+	font-family: 'Nanami-Light';
+	src: url('webfonts/2D14BF_2_0.eot');
+	src: url('webfonts/2D14BF_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D14BF_2_0.woff2') format('woff2'),url('webfonts/2D14BF_2_0.woff') format('woff'),url('webfonts/2D14BF_2_0.ttf') format('truetype');
+}
+
 
 // Typography
 
 .l1 {
-	font: 105% $font-light;
+	font: 80% $font-light;
+	display: inline;
+	letter-spacing: 1px;
+}
+
+.l2 {
+	font: 80% $font-book;
 	display: inline;
 	letter-spacing: 2px;
 }
 
 .b1 {
-	font: 105% $font-stack, Nanami-Bold;
+	font: 80% $font-stack, Nanami-Bold;
 	display: inline;
 	letter-spacing: 2px;
 }
 
 .b2 {
-	font: 115% $font-stack, Nanami-Bold;
+	font: 90% $font-stack, Nanami-Bold;
 	display: inline;
 	letter-spacing: 2px;
 }
@@ -89,14 +92,14 @@ body {
 }
 
 .section-head {
-	font-family: $font-stack, bold;
+	font-family: $font-stack;
 	color: #000000;
 	margin-left: 10%;
 	letter-spacing: 1px;
 }
 
 .beers {
-	font: 125% $font-stack;
+	font: 100% $font-stack;
 }
 
 .logo {
@@ -104,10 +107,12 @@ body {
 	position: block;
 	margin-left: 25%;
 	margin-right: 25%;
+	margin-top: -10px;
+	margin-bottom: -30px;
 }
 
 .headlineone {
-	font-family: $font-stack ,Nanami-Bold;
+	font-family: $font-stack;
 	color: #bfbfbf;
 	font-size: 16px;
 	margin-left: 10%;
@@ -123,28 +128,6 @@ body {
 
 // wishlist
 
-// .wishlist {
-
-// 	@include outer-container(80%);
-// 	padding: 10	px;
-// 	background-color: white;
-
-// 	table {
-
-// 	}
-
-// 	tr {
-
-// 	}
-
-// 	td {
-// 		display: inline;
-// 		// margin-left: 15px;
-// 		padding: 10px;
-// 		// text-align: left;
-// 	}
-// }
-
 .wishlist-new {
 	@include outer-container(80%);
 	background-color: #ffffff;
@@ -157,6 +140,7 @@ body {
 		height: 20px;
 		margin-left: 10px;
 		border-bottom: 1px solid #000000;
+		margin-bottom: 1px;
 	}
 
 	.wishlist-text {
@@ -165,6 +149,8 @@ body {
 		height: 20px;
 		margin-left: 10px;
 		border-bottom: 1px solid #e6e6e6;
+		line-height: 0px;
+		margin-top: 2px;
 	}
 
 	.wishlist-btn-title {
@@ -186,14 +172,6 @@ body {
 
 }
 
-.wishlist-content {
-	font: 100% $font-light;
-}
-
-.table-labels {
-	background-color: none;
-}
-
 // reviews
 
 .reviewtable {
@@ -213,7 +191,7 @@ body {
 	font-size: 100%;
 	color: black;
 	background-color: white;
-	height: 475px;
+	height: 460px;
 	padding: 20px;
 }
 
