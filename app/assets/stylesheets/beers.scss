@@ -22,28 +22,28 @@ body {
 
 // fonts
 
-// @font-face {
-// 	font-family: 'Nanami-Rounded-Bld';
-// 	src: font-url('webfonts/2D07A4_3_0.eot');
-// 	src: font-url('webfonts/2D07A4_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D07A4_3_0.woff2') format('woff2'),url('webfonts/2D07A4_3_0.woff') format('woff'),url('webfonts/2D07A4_3_0.ttf') format('truetype');
-// }
-
-// @font-face {
-// 	font-family: 'Nanami-Rounded-Lt';
-// 	src: font-url('webfonts/2D07A4_9_0.eot');
-// 	src: font-url('webfonts/2D07A4_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D07A4_9_0.woff2') format('woff2'),url('webfonts/2D07A4_9_0.woff') format('woff'),url('webfonts/2D07A4_9_0.ttf') format('truetype');
-// }
-  
-@font-face {font-family: 'Nanami-Bold';
-	src: font-url('webfonts/2D1133_1_0.eot');
-	src: font-url('webfonts/2D1133_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D1133_1_0.woff2') format('woff2'),url('webfonts/2D1133_1_0.woff') format('woff'),url('webfonts/2D1133_1_0.ttf') format('truetype');
-}
-  
 @font-face {
-	font-family: 'Nanami-Light';
-	src: font-url('webfonts/2D1133_A_0.eot');
-	src: font-url('webfonts/2D1133_A_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D1133_A_0.woff2') format('woff2'),url('webfonts/2D1133_A_0.woff') format('woff'),url('webfonts/2D1133_A_0.ttf') format('truetype');
+	font-family: 'Nanami-Rounded-Bld';
+	src: font-url('webfonts/2D07A4_3_0.eot');
+	src: font-url('webfonts/2D07A4_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D07A4_3_0.woff2') format('woff2'),url('webfonts/2D07A4_3_0.woff') format('woff'),url('webfonts/2D07A4_3_0.ttf') format('truetype');
 }
+
+@font-face {
+	font-family: 'Nanami-Rounded-Lt';
+	src: font-url('webfonts/2D07A4_9_0.eot');
+	src: font-url('webfonts/2D07A4_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D07A4_9_0.woff2') format('woff2'),url('webfonts/2D07A4_9_0.woff') format('woff'),url('webfonts/2D07A4_9_0.ttf') format('truetype');
+}
+  
+// @font-face {font-family: 'Nanami-Bold';
+// 	src: font-url('webfonts/2D1133_1_0.eot');
+// 	src: font-url('webfonts/2D1133_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D1133_1_0.woff2') format('woff2'),url('webfonts/2D1133_1_0.woff') format('woff'),url('webfonts/2D1133_1_0.ttf') format('truetype');
+// }
+  
+// @font-face {
+// 	font-family: 'Nanami-Light';
+// 	src: font-url('webfonts/2D1133_A_0.eot');
+// 	src: font-url('webfonts/2D1133_A_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D1133_A_0.woff2') format('woff2'),url('webfonts/2D1133_A_0.woff') format('woff'),url('webfonts/2D1133_A_0.ttf') format('truetype');
+// }
 
 // Typography
 
@@ -55,7 +55,12 @@ body {
 
 .b1 {
 	font: 105% $font-stack, Nanami-Bold;
-	font-weight: 900;
+	display: inline;
+	letter-spacing: 2px;
+}
+
+.b2 {
+	font: 115% $font-stack, Nanami-Bold;
 	display: inline;
 	letter-spacing: 2px;
 }
@@ -64,6 +69,7 @@ body {
 
 .links {
 	-webkit-appearance: none;
+	text-decoration: none;
 	appearance: none;
 	margin-right: 10%;
 	display: inline;
@@ -86,6 +92,7 @@ body {
 	font-family: $font-stack, bold;
 	color: #000000;
 	margin-left: 10%;
+	letter-spacing: 1px;
 }
 
 .beers {
@@ -97,16 +104,14 @@ body {
 	position: block;
 	margin-left: 25%;
 	margin-right: 25%;
-	margin-top: 25px;
 }
 
 .headlineone {
 	font-family: $font-stack ,Nanami-Bold;
-	font-weight: normal;
-	font-style: normal;
 	color: #bfbfbf;
 	font-size: 16px;
 	margin-left: 10%;
+	letter-spacing: 1px;
 
 }
 
@@ -116,37 +121,73 @@ body {
 	margin-top: 12px;
 }
 
-.bottom {
-	bottom: 10px;
-}
-
 // wishlist
 
-.wishlist {
+// .wishlist {
 
+// 	@include outer-container(80%);
+// 	padding: 10	px;
+// 	background-color: white;
+
+// 	table {
+
+// 	}
+
+// 	tr {
+
+// 	}
+
+// 	td {
+// 		display: inline;
+// 		// margin-left: 15px;
+// 		padding: 10px;
+// 		// text-align: left;
+// 	}
+// }
+
+.wishlist-new {
 	@include outer-container(80%);
-	padding: 10	px;
-	background-color: white;
+	background-color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
 
-	table {
-
+	.wishlist-title {
+		@include span-columns(3);
+  	@include omega();
+		height: 20px;
+		margin-left: 10px;
+		border-bottom: 1px solid #000000;
 	}
 
-	tr {
-
+	.wishlist-text {
+		@include span-columns(3);
+  	@include omega();
+		height: 20px;
+		margin-left: 10px;
+		border-bottom: 1px solid #e6e6e6;
 	}
 
-	td {
-		display: inline;
-		// margin-left: 15px;
-		padding: 10px;
-		// text-align: left;
+	.wishlist-btn-title {
+		@include span-columns(1);
+  	@include omega();
+		height: 20px;
+		margin-left: 10px;
+		border-bottom: 1px solid #000000;
+		text-align: right;
 	}
+
+	.wishlist-btn {
+		@include span-columns(1);
+  	@include omega();
+		height: 20px;
+		margin-left: 10px;
+		text-align: right;
+	}
+
 }
 
 .wishlist-content {
 	font: 100% $font-light;
-	width: 80%;
 }
 
 .table-labels {
@@ -164,7 +205,6 @@ body {
 		@include omega(3n);
 		margin-top: 20px;
 	}
-
 }
 
 .review {
