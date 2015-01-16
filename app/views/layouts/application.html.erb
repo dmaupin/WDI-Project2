@@ -8,14 +8,14 @@
 </head>
 <body>
 <br/>
-	<div class="headlineone">
-<!-- 		BETA - FOR THE BEST EXPERIENCE VIEW IN CHROME	 -->
+	<div class="b1 beta">BETA, CHROME PREFERRED</div>
+	<div class="b1 login">
 	
-	<% if current_user %>
-	<%= current_user.first_name.upcase + " " + current_user.last_name.upcase %> | <%= link_to "LOGOUT", logout_path %>
-	<% else %>
-	<%= link_to "LOGIN", login_path %> | <%= link_to "SIGN UP", signup_path %>
-	<% end %>
+		<% if current_user %>
+		<%= current_user.first_name.upcase + " " + current_user.last_name.upcase %> <span class="b1"> | </span><%= link_to "SIGN OUT", logout_path %>
+		<% else %>
+		<%= link_to "LOGIN", login_path %> | <%= link_to "SIGN UP", signup_path %>
+		<% end %>
 
 	</div>
 

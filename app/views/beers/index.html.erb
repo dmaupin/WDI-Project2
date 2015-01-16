@@ -39,24 +39,24 @@
 		<div class="review-container">
 			<div class="review">
 				<div class="beers"><%= beer.name.upcase %></div>
-				<hr class="divider-horizontal-two"/><br/>
+				<br/>
 				<div class="l1">
 				Brewery:<br/>
-				<span class="b2"><%= beer.brewery  %><br/></span><br/>
+				<span class="b3"><%= beer.brewery  %><br/></span><br/>
 				Style:<br/>
-				<span class="b2"><%= beer.style %><br/></span><br/>
+				<span class="b3"><%= beer.style %><br/></span><br/>
 				ABV%: 
-				<span class="b2"><%= beer.ABV %><br/></span><br/>
+				<span class="b3"><%= beer.ABV %><br/></span><br/>
 				Rating: 
-				<span class="b2"><%= beer.rating %></span> out of 10<br/><br/>
+				<span class="b3"><%= beer.rating %></span> out of 10<br/><br/>
 				Price: $
-				<span class="b2"><%= beer.price %><br/></span><br/>
+				<span class="b3"><%= beer.price %><br/></span><br/>
 				Taste:
-				<span class="b2"><%= beer.taste %></span><br/><br/>
+				<span class="b3"><%= beer.taste %></span><br/><br/>
 				Color:
-				<span class="b2"><%= beer.appearance %><br/></span><br/>
+				<span class="b3"><%= beer.appearance %><br/></span><br/>
 				<br/>
-				</div class="links b2">
+				</div class="links b3">
 				<%= link_to 'REVISE', edit_beer_path(beer) %> | <%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %>
 			</div>
 		</div>

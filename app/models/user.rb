@@ -9,7 +9,9 @@ class User
 
   has_secure_password
 
-  has_many :beer
+  embeds_many :beer
+
+  accepts_nested_attributes_for :beer
 
   validates :email, uniqueness: true
   validates :password, confirmation: true
