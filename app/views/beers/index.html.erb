@@ -10,27 +10,31 @@
 
 <div class="wishlist">
 
-	<tbody>
+
 		<table class="wishlist-content">
 			<br/>
+				<tr>
 			  	<td class="l1 table-labels">Name</td>
 			  	<td class="l1 table-labels">Brewery</td>
 			  	<td class="l1 table-labels">Style</td>
 			  	<!-- <td class="l1">$</td> -->
 			  	<td class="l1 table-labels">Delete</td>
 			  	<td class="l1 table-labels">Review</td>
+			  </tr>	
 			</table>
 	<% @beers.each do |beer| %>
 		<br/>
 			<table class="wishlist-content">
+				<tr>
 			  	<td class="b1"><%= beer.name.upcase %></td>
 			  	<td class="l1"><%= beer.brewery %></td>
 			  	<td class="l1"><%= beer.style %></td>
 			  	<!-- <td class="l1">$<%= beer.price %></td> -->
 			  	<td class="bold button"><%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %></td>
 			  	<td><input type="checkbox" value="false"/></td>
+			  </tr>
 			</table>
-		</tbody>
+
 	<% end %>
 </div>
 
@@ -50,26 +54,26 @@
 				<hr class="divider-horizontal-two"/><br/>
 				<div class="l1">
 				Brewery:<br/>
-				<span class="b1"><%= beer.brewery  %><br/></span>
+				<span class="b1"><%= beer.brewery  %><br/></span><br/>
 				Style:<br/>
-				<span class="b1"><%= beer.style %><br/></span>
+				<span class="b1"><%= beer.style %><br/></span><br/>
 				ABV%: 
-				<span class="b1"><%= beer.ABV %><br/></span>
+				<span class="b1"><%= beer.ABV %><br/></span><br/>
 				Rating: 
-				<span class="b1"><%= beer.rating %><br/></span>
+				<span class="b1"><%= beer.rating %></span> out of 10<br/><br/>
 				Price: $
-				<span class="b1"><%= beer.price %><br/></span>
-				Taste:<br/>
-				<span class="b1"><%= beer.taste %><br/></span>
-				Appearance:<br/>
-				<span class="b1"><%= beer.appearance %><br/></span>
+				<span class="b1"><%= beer.price %><br/></span><br/>
+				Taste:
+				<span class="b1"><%= beer.taste %></span><br/><br/>
+				Appearance:
+				<span class="b1"><%= beer.appearance %><br/></span><br/>
+				<br/>
 				</div class="link bottom">
 				<%= link_to 'REVISE', edit_beer_path(beer) %> | <%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %>
 			</div>
 		</div>
 		<% end %>
 	</div>
-	<br/><br/>
 	<hr class="divider-horizontal"/>
 		
 		

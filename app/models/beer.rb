@@ -11,4 +11,6 @@ class Beer
 
   belongs_to :user
 
+  # validates :name, confirmation: true
+
 end
