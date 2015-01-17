@@ -3,35 +3,41 @@
 <!-- Section 1 - Wish List -->
 
 <br/>
+
 <div class="section-head">
 			WISH LIST <div class="links"><%= link_to '+', '/beers/new' %></div>
 </div>
+
 <hr class="divider-horizontal"/>
 <br/>
-<div class="wishlist-new">
-		<div class="wishlist-title l1">Beer</div>
-		<div class="wishlist-title l1">Brewery</div>
-		<div class="wishlist-title l1">Style</div>
-		<div class="wishlist-btn-title l1"></div>
-		<div class="wishlist-btn-title l1">X</div>
-		<div class="wishlist-btn-title l1">✔</div>
-</div>
+
+	<div class="wishlist-new">
+			<div class="wishlist-title l1">Beer</div>
+			<div class="wishlist-title l1">Brewery</div>
+			<div class="wishlist-title l1">Style</div>
+			<div class="wishlist-btn-title l1"></div>
+			<div class="wishlist-btn-title l1">X</div>
+			<div class="wishlist-btn-title l1">✔</div>
+	</div>
+
 <% @beers.each do |beer| %>
-<div class="wishlist-new">
-		<div class="wishlist-text b1"><%= beer.name.upcase %></div>
-		<div class="wishlist-text l2"><%= beer.brewery %></div>
-		<div class="wishlist-text l2"><%= beer.style %></div>
-		<div class="wishlist-btn l2"></div>
-		<div class="wishlist-btn l2"><%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %></div>
-		<div class="wishlist-btn l2"><%= link_to "✔", edit_beer_path(beer) %></div>
-</div>
+	<div class="wishlist-new">
+			<div class="wishlist-text b1"><%= beer.name.upcase %></div>
+			<div class="wishlist-text l2"><%= beer.brewery %></div>
+			<div class="wishlist-text l2"><%= beer.style %></div>
+			<div class="wishlist-btn l2"></div>
+			<div class="wishlist-btn l2"><%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %></div>
+			<div class="wishlist-btn l2"><%= link_to "✔", edit_beer_path(beer) %></div>
+	</div>
 <% end %>
 
 <!-- Section 2 - Reviews -->
 
 
 	<br/><br/>
+
 	<div class="section-head"> REVIEWS </div>
+
 	<hr class="divider-horizontal"/>
 		
 	<div class="reviewtable">
@@ -40,29 +46,31 @@
 			<div class="review">
 				<div class="beers"><%= beer.name.upcase %></div>
 				<br/>
-				<div class="l1">
-				Brewery:<br/>
-				<span class="b3"><%= beer.brewery  %><br/></span><br/>
-				Style:<br/>
-				<span class="b3"><%= beer.style %><br/></span><br/>
-				ABV%: 
-				<span class="b3"><%= beer.ABV %><br/></span><br/>
-				Rating: 
-				<span class="b3"><%= beer.rating %></span> out of 10<br/><br/>
-				Price: $
-				<span class="b3"><%= beer.price %><br/></span><br/>
-				Taste:
-				<span class="b3"><%= beer.taste %></span><br/><br/>
-				Color:
-				<span class="b3"><%= beer.appearance %><br/></span><br/>
-				<br/>
-				</div class="links b3">
-				<%= link_to 'REVISE', edit_beer_path(beer) %> | <%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %>
+					<div class="l1">
+					Brewery:<br/>
+					<span class="b3"><%= beer.brewery  %><br/></span><br/>
+					Style:<br/>
+					<span class="b3"><%= beer.style %><br/></span><br/>
+					ABV%: 
+					<span class="b3"><%= beer.ABV %><br/></span><br/>
+					Rating: 
+					<span class="b3"><%= beer.rating %></span> out of 10<br/><br/>
+					Price: $
+					<span class="b3"><%= beer.price %><br/></span><br/>
+					Taste:
+					<span class="b3"><%= beer.taste %></span><br/><br/>
+					Color:
+					<span class="b3"><%= beer.appearance %><br/></span><br/>
+					<br/>
+					</div class="links b3">
+					<%= link_to 'REVISE', edit_beer_path(beer) %> | <%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %>
 			</div>
 		</div>
 		<% end %>
 	</div>
+
 	<hr class="divider-horizontal"/>
+	
 	<br/><br/><br/><br/>
 		
 

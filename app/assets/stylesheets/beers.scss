@@ -19,30 +19,30 @@ body {
 
 // fonts
 
-// nanami
+	// nanami
 
-@font-face {
-	font-family: 'Nanami-Bold';
-	src: url('webfonts/2D14BF_0_0.eot');
-	src: url('webfonts/2D14BF_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D14BF_0_0.woff2') format('woff2'),url('webfonts/2D14BF_0_0.woff') format('woff'),url('webfonts/2D14BF_0_0.ttf') format('truetype');
-}
- 
-  
-@font-face {
-	font-family: 'Nanami-Book';
-	src: url('webfonts/2D14BF_1_0.eot');
-	src: url('webfonts/2D14BF_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D14BF_1_0.woff2') format('woff2'),url('webfonts/2D14BF_1_0.woff') format('woff'),url('webfonts/2D14BF_1_0.ttf') format('truetype');
-}
- 
-  
-@font-face {
-	font-family: 'Nanami-Light';
-	src: url('webfonts/2D14BF_2_0.eot');
-	src: url('webfonts/2D14BF_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D14BF_2_0.woff2') format('woff2'),url('webfonts/2D14BF_2_0.woff') format('woff'),url('webfonts/2D14BF_2_0.ttf') format('truetype');
-}
+	@font-face {
+		font-family: 'Nanami-Bold';
+		src: url('webfonts/2D14BF_0_0.eot');
+		src: url('webfonts/2D14BF_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D14BF_0_0.woff2') format('woff2'),url('webfonts/2D14BF_0_0.woff') format('woff'),url('webfonts/2D14BF_0_0.ttf') format('truetype');
+	}
+	 
+	  
+	@font-face {
+		font-family: 'Nanami-Book';
+		src: url('webfonts/2D14BF_1_0.eot');
+		src: url('webfonts/2D14BF_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D14BF_1_0.woff2') format('woff2'),url('webfonts/2D14BF_1_0.woff') format('woff'),url('webfonts/2D14BF_1_0.ttf') format('truetype');
+	}
+	 
+	  
+	@font-face {
+		font-family: 'Nanami-Light';
+		src: url('webfonts/2D14BF_2_0.eot');
+		src: url('webfonts/2D14BF_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D14BF_2_0.woff2') format('woff2'),url('webfonts/2D14BF_2_0.woff') format('woff'),url('webfonts/2D14BF_2_0.ttf') format('truetype');
+	}
 
 
-// Typography
+// typography
 
 .l1 {
 	font: 80% $font-light;
@@ -70,7 +70,7 @@ body {
 	letter-spacing: 2px;
 }
 
-// Global Styles
+// global styles
 
 .links {
 	-webkit-appearance: none;
@@ -98,7 +98,10 @@ body {
 	color: #000000;
 	margin-left: 10%;
 	letter-spacing: 1px;
+
 }
+
+// specific styles
 
 .logo {
 	width: 50%;
@@ -173,11 +176,50 @@ body {
 
 }
 
+// forms
+
+.form-one {
+	@include outer-container(80%);
+	background-color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	.form-input {
+		@include span-columns(12);
+		@include omega(4n);
+		margin-bottom: 1px;
+		margin-left: 10px;
+	}
+
+}
+
+	.form-btn {
+		float: right;
+		margin-right: 10%;	
+		margin-bottom: 10px;
+	}
+
+.form-two {
+
+	@include outer-container(80%);
+	background-color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+		.form-input-two {
+		@include span-columns(10);
+		@include omega(4n);
+		margin-bottom: 1px;
+		margin-left: 10px;
+	}
+
+
+}
+
 // reviews
 
 .reviewtable {
 	@include outer-container(80%);
-	// @include outer-container;
 
 	.review-container {
 		@include span-columns(4);
@@ -199,7 +241,7 @@ body {
 	font-size: 100%;
 	color: black;
 	background-color: white;
-	height: 440px;
+	height: 370px;
 	padding: 20px;
 }
 

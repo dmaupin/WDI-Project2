@@ -1,14 +1,24 @@
-<div class="bold center-block">
-<h1>SIGN UP</h1>
+<div class="b2 form-btn"><%= link_to "BACK", beers_path %>
+</div>
 
-<%= form_for @user do |f| %>
+<div class="section-head">SIGN UP</div>
 
-	First Name: <%= f.text_field :first_name %>
-	Last Name: <%= f.text_field :last_name %>
-	Email: <%= f.text_field :email %>
-	Password <%= f.password_field :password %>
-	Password Confirm <%= f.password_field :password_confirmation %>
-	<%= f.submit "Signup" %>
+<hr class="divider-horizontal"/>
+
+	<div class="form-two l1">
+	
+	<%= form_for @user do |f| %>
+
+			<div class="form-input">
+				First: <%= f.text_field :first_name %>
+				Last: <%= f.text_field :last_name %>
+				Email: <%= f.text_field :email %>
+				Password <%= f.password_field :password %> 
+				Confirm <%= f.password_field :password_confirmation %>
+			<span class="b2"><%= f.submit "SIGN UP" %></span>
+		</div>
+	</div>
 
 <% end %>
-</div>
+
+<hr class="divider-horizontal"/>

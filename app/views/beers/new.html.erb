@@ -1,16 +1,24 @@
-   <div class="bold center-block">
-   	<h1 class="">ADD A NEW BREW!</h1>
-   </div>
+<!-- Add new beer form -->
 
-    <%= form_for @beer do |f| %>
+<br/>
+<div class="b2 form-btn"><%= link_to "BACK", beers_path %>
+</div>
+<div class="section-head"> ADD A NEW BREW!</div>
+<hr class="divider-horizontal"/>
 
-        Name: <%= f.text_field :name %>
-        Brewery: <%= f.text_field :brewery %>
-        Style: <%= f.text_field :style %>
-        Price: <%= f.text_field :price %>
+<div class="form-one">
 
-        <div class="bold"><%= f.submit "Add beer!" %></div>
+  <%= form_for @beer do |f| %>
 
-    <% end %>
+  <div class="form-input l2">
+    Name: <%= f.text_field :name %>
+    Brewery: <%= f.text_field :brewery %>
+    Style: <%= f.text_field :style %>
+    <span class="l2"><%= f.submit "+" %></span>
+  </div>
 
-    <%= link_to "Back to the list!", beers_path %>
+</div>
+
+<% end %>
+
+<hr class="divider-horizontal"/>
