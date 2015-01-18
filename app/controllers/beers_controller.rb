@@ -16,7 +16,7 @@ class BeersController < ApplicationController
       if @beer.save
         redirect_to beers_path
       else
-        render "new"
+        render :new
       end
     end
 
@@ -34,7 +34,7 @@ class BeersController < ApplicationController
       redirect_to beers_path
       else
         # "edit"?
-      render "/edit" 
+      render :edit
       end
     end
 
