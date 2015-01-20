@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 		if @user.save
 			redirect_to beers_path
 		else
-			render :new
+			render :login
 		end
 	end
 

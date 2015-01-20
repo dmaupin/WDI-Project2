@@ -15,4 +15,6 @@ class User
 
   validates :email, uniqueness: true
   validates :password, confirmation: true
+  validates :email, presence: true
+
 end

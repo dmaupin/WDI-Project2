@@ -43,7 +43,7 @@
 	<% @beers.each do |beer| %>
 		<div class="review-container">
 			<div class="review">
-				<div class="beers"><%= beer.name.upcase %></div>
+				<div class="beers"><%= link_to beer.name.upcase, beer_path(beer) %></div>
 				<br/>
 					<div class="l1">
 					Brewery:<br/>

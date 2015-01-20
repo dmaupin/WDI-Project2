@@ -9,7 +9,7 @@ class Beer
   field :rating, type: Integer
   field :ABV, type: Float
 
-  # belongs_to :user
+  # embedded_in :user
 
   validates :name, presence: true
 

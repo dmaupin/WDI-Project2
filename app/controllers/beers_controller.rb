@@ -20,9 +20,9 @@ class BeersController < ApplicationController
       end
     end
 
-    # def show
-    #   @beer = Beer.find(params[:id])
-    # end
+    def show
+      @beer = Beer.find(params[:id])
+    end
 
     def edit
       @beer = Beer.find(params[:id])    

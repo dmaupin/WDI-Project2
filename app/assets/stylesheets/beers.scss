@@ -70,6 +70,15 @@ body {
 	letter-spacing: 2px;
 }
 
+.b4 {
+	font: 175% $font-stack;
+}
+
+.image-link {
+	text-align: center;
+	margin-top: 58%;
+}
+
 // global styles
 
 .links {
@@ -243,5 +252,41 @@ body {
 	height: 370px;
 	padding: 20px;
 }
+
+// show
+
+.showtable {
+	@include outer-container(80%);
+
+	.view {
+		@include span-columns(4);
+		margin-top: 20px;
+		font-family	: $font-stack;
+		letter-spacing: 2px;
+		font-size: 100%;
+		color: black;
+		background-color: white;
+		height: 400px;
+		padding: 20px;
+	}
+
+	.image-container {
+		@include span-columns(4);
+		@include omega();
+		background-color: #bfbfbf;
+		margin-top: 20px;
+		margin-right: 20px;
+		height: 400px;
+	}
+
+	.taste-container {
+		@include span-columns(4);
+		@include omega();
+		background-color: #d9d9d9;
+		margin-top: 20px;
+		height: 400px;
+	}
+}
+
 
 

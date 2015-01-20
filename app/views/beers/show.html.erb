@@ -1,0 +1,43 @@
+<br/>
+	<div class="b2 form-btn"><%= link_to "BACK", beers_path %></div>
+<br/>
+
+	<hr class="divider-horizontal"/>
+		
+	<div class="showtable">
+		<div class="view">
+
+				<div class="b4"><%= @beer.name.upcase %></div>
+				<br/>
+					<div class="l1">
+					Brewery:<br/>
+					<span class="b3"><%= @beer.brewery  %><br/></span><br/>
+					Style:<br/>
+					<span class="b3"><%= @beer.style %><br/></span><br/>
+					ABV%: 
+					<span class="b3"><%= @beer.ABV %><br/></span><br/>
+					Rating: 
+					<span class="b3"><%= @beer.rating %></span> out of 10<br/><br/>
+					Price: $
+					<span class="b3"><%= @beer.price %><br/></span><br/>
+					Taste:
+					<span class="b3"><%= @beer.taste %></span><br/><br/>
+					Color:
+					<span class="b3"><%= @beer.appearance %><br/></span><br/>
+					<br/>
+					</div class="links b3">
+					<%= link_to 'REVISE', edit_beer_path(@beer) %> | <%= link_to "X", @beer, method: :delete, data: { confirm: "Are you sure?"} %>
+		</div>
+		<div class="image-container">
+			<div class="b2 image-link">UPLOAD A PHOTO</div>
+		</div>
+		<div class="taste-container">
+			<div class="b2 image-link">FLAVOR PROFILE</div>
+		</div>
+	</div>
+
+	<br/>
+
+	<hr class="divider-horizontal"/>
+	
+	<br/><br/><br/><br/>
