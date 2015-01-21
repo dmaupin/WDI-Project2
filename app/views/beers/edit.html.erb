@@ -1,15 +1,45 @@
-<div class="bold center-block">
-<h1>REVIEW</h1>
+<br/>
+	<div class="b2 form-btn"><%= link_to "BACK", beers_path %></div>
+<br/>
+
+	<hr class="divider-horizontal"/>
+		
+	<div class="showtable">
+		<div class="view">
 
 			<%= form_for @beer do |f| %>
-			Brewery: <%= f.text_field :brewery  %><br/>
-			Style: <%= f.text_field :style %><br/>
-			ABV: <%= f.number_field :ABV %><br/>
-			Rating: <%= f.number_field :rating %><br/>
-			Price: <%= f.number_field :price %><br/>
-			Taste: <%= f.text_field :taste %><br/>
-			Apperance: <%= f.text_field :appearance %><br/>
+			<div class="b4"><%= @beer.name.upcase %></div>
+			<br/>
+			<div class="l1">
+				Brewery:<br/> 
+				<%= f.text_field :brewery  %><br/>
+				Style:<br/>
+				<%= f.text_field :brewery  %><br/>
+				ABV:<br/> 
+				<%= f.number_field :ABV %><br/>
+				Rating:<br/> 
+				<%= f.number_field :rating %><br/>
+				Price:<br/> 
+				<%= f.number_field :price %><br/>
+				Taste:<br/> 
+				<%= f.text_field :taste %><br/>
+				Apperance:<br/> 
+				<%= f.text_field :appearance %><br/>
+				<br/> 
+				<%= f.submit "Update" %>
+			<% end %>				
+			</div>
+		</div>
+		<div class="image-container">
+			<div class="b2 image-link">UPLOAD A PHOTO</div>
+		</div>
+		<div class="taste-container">
+			<div class="b2 image-link">FLAVOR PROFILE</div>
+		</div>
+	</div>
 
-			<%= f.submit "Update" %>
-	<% end %>				
-</div>
+	<br/>
+
+	<hr class="divider-horizontal"/>
+	
+	<br/><br/><br/><br/>

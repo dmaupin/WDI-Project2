@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # post '/beers' => 'beers#create'
 
   get '/signup' => 'users#new', as: :signup
+  post '/users' => 'users#create'
 
   get '/login' => 'sessions#new', as: :login
   post '/login' => 'sessions#create'
