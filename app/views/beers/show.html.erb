@@ -1,3 +1,9 @@
+	<script>
+		window.onload = function(){
+			FFChartwell()
+		}
+	</script>
+
 <br/>
 	<div class="b2 form-btn"><%= link_to "BACK", beers_path %></div>
 <br/>
@@ -29,10 +35,21 @@
 					<%= link_to 'REVISE', edit_beer_path(@beer) %> | <%= link_to "X", @beer, method: :delete, data: { confirm: "Are you sure?"} %>
 		</div>
 		<div class="image-container">
-			<div class="b2 image-link">UPLOAD A PHOTO</div>
+			<div class="b2 image-link">UPLOAD A PHOTO<br/>+</div>
 		</div>
 		<div class="taste-container">
-			<div class="b2 image-link">FLAVOR PROFILE</div>
+					<div style="font-size: 400px;">
+				<span class="chartwell radar chart">
+					<span style="color: #595959">cx</span>
+					<span style="color: #e6e6e6">90</span>
+					<span style="color: #d9d9d9">20</span>
+					<span style="color: #cccccc">85</span>
+					<span style="color: #bfbfbf">40</span>
+					<span style="color: #b3b3b3">95</span>
+				</span>
+			</div>
+<!-- 			<div class="b2 image-link">FLAVOR PROFILE</div> -->
+
 		</div>
 	</div>
 

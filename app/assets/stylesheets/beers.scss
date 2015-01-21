@@ -7,7 +7,7 @@
 $font-stack: Nanami-Bold, Helvetica, sans-serif,;
 $font-book: Nanami-Book, Helvetica, sans-serif,;
 $primary-color: #000000;
-$background: #fafafa;
+$background: #f5f5f5;
 $font-light: Nanami-Light, Helvetica, sans-serif;
 
 // global styles
@@ -113,11 +113,11 @@ body {
 // specific styles
 
 .logo {
-	width: 50%;
+	width: 20%;
 	position: block;
-	margin-left: 25%;
-	margin-right: 25%;
-	margin-top: -10px;
+	margin-left: 40%;
+	margin-right: 40%;
+	margin-top: 20px;
 	margin-bottom: -30px;
 }
 
@@ -273,7 +273,7 @@ body {
 	.image-container {
 		@include span-columns(4);
 		@include omega();
-		background-color: #bfbfbf;
+		background-color: #ffffff;
 		margin-top: 20px;
 		margin-right: 20px;
 		height: 400px;
@@ -282,9 +282,14 @@ body {
 	.taste-container {
 		@include span-columns(4);
 		@include omega();
-		background-color: #d9d9d9;
+		background-color: #ffffff;
 		margin-top: 20px;
 		height: 400px;
+		
+	.chart {
+		text-align: center;
+		}
+
 	}
 }
 
