@@ -3,7 +3,7 @@ class BeersController < ApplicationController
   # before_action :authorize
 
 	  def index
-      @beers = Beer.all
+      @beers = Beer.all.order(created_at: :desc)
     end
 
     def new

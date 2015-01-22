@@ -281,13 +281,14 @@ body {
 
 	.taste-container {
 		@include span-columns(4);
-		@include omega();
+		@include omega(3n);
 		background-color: #ffffff;
 		margin-top: 20px;
 		height: 400px;
 		
 	.chart {
 		text-align: center;
+		text-size: 100%;
 		}
 
 	}
