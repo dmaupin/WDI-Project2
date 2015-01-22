@@ -30,6 +30,12 @@ gem 'bourbon'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
+gem 'fog'         # required for Amazon S3
+gem 'mini_magick' # for post-upload image processing
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

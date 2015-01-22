@@ -9,8 +9,9 @@ class Beer
   field :appearance, type: String
   field :rating, type: Integer
   field :ABV, type: Float
+  mount_uploader :photo, OurImageUploader
 
-  # embedded_in :user
+  belongs_to :user
 
   validates :name, presence: true
 

@@ -9,7 +9,7 @@ class User
 
   has_secure_password
 
-  # embeds_many :beers
+  has_many :beers
 
   # accepts_nested_attributes_for :beer
 

@@ -11,7 +11,7 @@ class BeersController < ApplicationController
     end
 
     def create
-      @beer = Beer.new(params.require(:beer).permit(:name, :brewery, :style, :price))
+      @beer = Beer.new(beer_params)
 
       if @beer.save
         redirect_to beers_path
@@ -30,10 +30,9 @@ class BeersController < ApplicationController
 
     def update
       @beer = Beer.find(params[:id])
-      if @beer.update_attributes(params.require(:beer).permit(:name, :brewery, :style, :ABV, :price, :rating, :taste, :appearance))
+      if @beer.update(beer_params)
       redirect_to beers_path
       else
-        # "edit"?
       render :edit
       end
     end
@@ -42,6 +41,10 @@ class BeersController < ApplicationController
       @beer = Beer.find(params[:id])
       @beer.destroy
       redirect_to beers_path
+    end
+
+    def beer_params
+      params.require(:beer).permit(:name, :brewery, :style, :ABV, :price, :rating, :taste, :appearance, :photo, :image)
     end
 
 end
