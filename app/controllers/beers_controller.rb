@@ -11,7 +11,10 @@ class BeersController < ApplicationController
     end
 
     def create
-      @beer = Beer.new(beer_params)
+      # @user = User.find(params[:user_id])
+
+      @beer = current_user.beers.new(beer_params)
+      # current_user.beers = Beer.new(beer_params)
 
       if @beer.save
         redirect_to beers_path

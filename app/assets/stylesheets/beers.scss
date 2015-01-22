@@ -74,10 +74,10 @@ body {
 	font: 175% $font-stack;
 }
 
-.image-link {
-	text-align: center;
-	padding-top: 15%;
-}
+// .image-link {
+// 	text-align: center;
+// 	padding-top: 15%;
+// }
 
 // global styles
 
@@ -277,18 +277,29 @@ body {
 		margin-top: 20px;
 		margin-right: 20px;
 		height: 400px;
+	
+		.image {
+			margin-bottom: 40px;
+			padding: 20px;
+			text-align: center;
+		}
+
+	}
+
+	.grey {
+		filter: grayscale(1);
+		filter: grayscale(100%); /* same */
 	}
 
 	.taste-container {
 		@include span-columns(4);
-		@include omega(3n);
+		@include omega();
 		background-color: #ffffff;
 		margin-top: 20px;
 		height: 400px;
 		
 	.chart {
 		text-align: center;
-		text-size: 100%;
 		}
 
 	}
