@@ -11,10 +11,7 @@ class Beer
   field :ABV, type: Float
   mount_uploader :photo, OurImageUploader
 
-  # belongs_to :user
-  # referenced_in :user
   embedded_in :user
-  
 
   validates :name, presence: true
 

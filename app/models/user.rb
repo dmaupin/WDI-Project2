@@ -9,13 +9,11 @@ class User
 
   has_secure_password
 
-  # has_many :beer
-  # references_many :beers
   embeds_many :beers
   accepts_nested_attributes_for :beers
 
-  # validates :email, uniqueness: true
-  # validates :password, confirmation: true
-  # validates :email, presence: true
+  validates :email, uniqueness: true
+  validates :password, confirmation: true
+  validates :email, presence: true
 
 end

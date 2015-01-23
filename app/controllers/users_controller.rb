@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 		if @user.save
 			redirect_to beers_path
 		else
+			flash[:danger] = "Username or password incorrect."
 			redirect_to :signup
 		end
 	end

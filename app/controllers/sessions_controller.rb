@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
 			# = u.id.to_string
 			redirect_to beers_path
 		else
+			flash[:danger] = "Username or password incorrect."
 			render :new
 		end
 	end

@@ -79,14 +79,16 @@
 		
 <% else %>
 
-<br/>
+<br/><br/>	
 
-	<hr class="divider-horizontal"/>
+	<hr class="divider-horizontal"/><br/><br/>
 
 	<div class="showtable"><br/>
-		<div class="b5"> Welcome to KANPAI! <br/> A web app for the beer enthusist.
+		<div class="b5"> Welcome to Kanpai! <br/> A web app for the craft beer enthusiast.
 		</div><br/>
-		<div class="b5"><%= link_to "SIGN UP NOW", signup_path %></div>
+		<div class="b4a"><%= link_to "LOGIN", login_path %> | <%= link_to "SIGN UP", signup_path %></div>
+		<div class="logo"><img src="<%= asset_path('KANPAI_APP_LOGO_COMP-1a.svg') %>" alt="KANPAI!"></div>
+
 	</div>
 
 <% end %>

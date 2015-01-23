@@ -17,7 +17,8 @@ class BeersController < ApplicationController
       if @beer.save
         redirect_to beers_path
       else
-        render :new
+        flash[:danger] = "Entry needs a name "
+        redirect_to new_beer_path
       end
     end
 

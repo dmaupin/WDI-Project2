@@ -3,7 +3,7 @@
 <br/>
 <div class="b2 form-btn"><%= link_to "BACK", beers_path %>
 </div>
-<div class="section-head"> ADD A NEW BREW!</div>
+<div class="section-head"> ADD A NEW BREW! </div>
 <hr class="divider-horizontal"/>
 
 <div class="form-one">
@@ -14,12 +14,16 @@
     Name: <%= f.text_field :name %>
     Brewery: <%= f.text_field :brewery %>
     Style: <%= f.text_field :style %>
-    <span class="l2"><%= f.submit "+" %></span>
+<span class="l2"><%= f.submit "+" %></span>
   </div>
+  <% end %><br/>
+  	<% flash.each do |key, value| %>
+  <br/><span class="b4a"><div class='alert-<%= key %>' role='danger'>
+    <%= value %>
+  </div></span>
+<% end %>
 
 </div>
-
-<% end %>
 
 <hr class="divider-horizontal"/>
 

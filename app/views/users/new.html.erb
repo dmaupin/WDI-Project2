@@ -3,13 +3,15 @@
 
 <div class="section-head">SIGN UP</div>
 
+<br/>
+
 <hr class="divider-horizontal"/>
 
-	<div class="form-two l1">
+	<div class="form-two">
 	
 	<%= form_for @user do |f| %>
 
-			<div class="form-input">
+			<div class="form-input l1">
 				First: <%= f.text_field :first_name %>
 				Last: <%= f.text_field :last_name %>
 				Email: <%= f.text_field :email %>
@@ -17,8 +19,16 @@
 				Confirm <%= f.password_field :password_confirmation %>
 			<span class="b2"><%= f.submit "SIGN UP" %></span>
 		</div>
-	</div>
+	
 
 <% end %>
+
+<% flash.each do |key, value| %>
+  <br/><div class='b4a alert-<%= key %>' role='danger'>
+    <%= value %>
+  </div>
+<% end %>
+
+</div>
 
 <hr class="divider-horizontal"/>

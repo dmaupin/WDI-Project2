@@ -2,6 +2,8 @@
 </div>
 <div class="section-head">Login</div>
 
+<br/>
+
 <hr class="divider-horizontal"/>
 
 <div class="form-one">
@@ -11,9 +13,14 @@
 		Email: <%= f.text_field :email %>
 		Password: <%= f.password_field :password %>
 		<%= f.submit "login" %>
-	</div>
+	</div><br/>
+<% end %>
+	<% flash.each do |key, value| %>
+  <br/><span class="b4a"><div class='alert-<%= key %>' role='danger'>
+    <%= value %>
+  </div></span>
+<% end %>
 </div>
 
-<hr class="divider-horizontal"/>
 
-<% end %>
+<hr class="divider-horizontal"/>
