@@ -6,10 +6,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 	
-	<!-- <link rel="stylesheet" type="text/css" href="range-style.css"> -->
-	<!-- <script src="chartwell.min.js" type="text/javascript"></script> -->
-	<!-- <script src="chartwell_radar.min.js" type="text/javascript"></script> -->
-	<!-- <script>window.onload = function(){FFChartwell()}</script> -->
+	<!-- <link rel="stylesheet" type="text/css" href="range-style.css">
+	<script src="chartwell.min.js" type="text/javascript"></script>
+	<script src="chartwell_radar.min.js" type="text/javascript"></script>
+	<script>window.onload = function(){FFChartwell()}</script> -->
 
 </head>
 
@@ -19,9 +19,9 @@
 	<div class="b1 login">
 	
 		<% if current_user %>
-		<%= current_user.first_name.upcase + " " + current_user.last_name.upcase %> <span class="b1"> | </span><%= link_to "SIGN OUT", logout_path %>
+		<%= current_user.first_name.upcase + " " + current_user.last_name.upcase %> <span class="b1"> | </span><%= link_to "SIGN OUT", logout_path, class: "links" %>
 		<% else %>
-		<%= link_to "LOGIN", login_path %> | <%= link_to "SIGN UP", signup_path %>
+		<%= link_to "LOGIN", login_path, class: "links" %> | <%= link_to "SIGN UP", signup_path, class: "links" %>
 		<% end %>
 
 	</div>

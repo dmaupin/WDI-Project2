@@ -99,13 +99,28 @@ body {
 
 // global styles
 
+link {
+	-webkit-display: none;
+	text-decoration: none;
+}
+
 .links {
 	-webkit-appearance: none;
 	text-decoration: none;
 	appearance: none;
-	margin-right: 10%;
 	display: inline;
 	user-select: none;
+	color: #000000;
+}
+
+.links:hover {
+	-webkit-appearance: none;
+	text-decoration: none;
+	appearance: none;
+	display: inline;
+	user-select: none;
+	transition: .2s;
+	color: #1c478d;
 }
 
 .button {
@@ -197,6 +212,7 @@ body {
 		@include span-columns(1);
   	@include omega();
 		height: 20px;
+		border-bottom: 1px solid #e6e6e6;
 		margin-left: 10px;
 		text-align: right;
 	}
@@ -305,8 +321,14 @@ body {
 	}
 
 	.grey {
-		filter: grayscale(1);
+		-webkit-filter: grayscale(1);
 		filter: grayscale(100%); /* same */
+	}
+
+	.grey:hover {
+		-webkit-filter: grayscale(0);
+		transition: .2s;
+		filter: grayscale(0%); /* same */
 	}
 
 	.taste-container {

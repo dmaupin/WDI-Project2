@@ -36,6 +36,8 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'fog'         # required for Amazon S3
 gem 'mini_magick' # for post-upload image processing
 
+gem "figaro"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

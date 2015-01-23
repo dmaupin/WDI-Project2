@@ -5,7 +5,7 @@
 	// </script>
 
 <br/>
-	<div class="b2 form-btn"><%= link_to "BACK", beers_path %></div>
+	<div class="b2 form-btn"><%= link_to "BACK", beers_path, class: "links" %></div>
 <br/>
 
 	<hr class="divider-horizontal"/>
@@ -32,10 +32,10 @@
 					<span class="b3"><%= @beer.appearance %><br/></span><br/>
 					<br/>
 					</div class="links b3">
-					<%= link_to 'REVISE', edit_beer_path(@beer) %> | <%= link_to "X", @beer, method: :delete, data: { confirm: "Are you sure?"} %>
+					<%= link_to 'REVISE', edit_beer_path(@beer), class: "links" %> | <%= link_to "X", @beer, method: :delete, data: { confirm: "Are you sure?"}, class: "links" %>
 		</div>
 		<div class="image-container">
-			<div class="b2 image grey"><%= image_tag @beer.photo.url(:small) %><br/></div>
+			<div class="image grey"><%= image_tag @beer.photo.url(:small) %><br/></div>
 		</div>
 		<div class="taste-container">
 					<div class="chart" style="font-size: 400px;">

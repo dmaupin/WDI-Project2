@@ -5,7 +5,7 @@
 <br/>
 
 <div class="section-head">
-			WISH LIST <div class="links"><%= link_to '+', new_beer_path %></div>
+			WISH LIST <div class="links"><%= link_to '+', new_beer_path, class: "links" %></div>
 </div>
 
 <hr class="divider-horizontal"/>
@@ -16,7 +16,7 @@
 			<div class="wishlist-title l1">Brewery</div>
 			<div class="wishlist-title l1">Style</div>
 			<div class="wishlist-btn-title l1"></div>
-			<div class="wishlist-btn-title l1">X</div>
+			<div class="wishlist-btn-title l1">✖</div>
 			<div class="wishlist-btn-title l1">✎</div>
 	</div>
 
@@ -26,8 +26,8 @@
 			<div class="wishlist-text l2"><%= beer.brewery %></div>
 			<div class="wishlist-text l2"><%= beer.style %></div>
 			<div class="wishlist-btn l2"></div>
-			<div class="wishlist-btn l2"><%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %></div>
-			<div class="wishlist-btn l2"><%= link_to "✎", edit_beer_path(beer) %></div>
+			<div class="wishlist-btn l2"><%= link_to "✖", beer, method: :delete, data: { confirm: "Are you sure?"}, class: "links" %></div>
+			<div class="wishlist-btn l2"><%= link_to "✎", edit_beer_path(beer), class: "links" %></div>
 	</div>
 <% end %>
 
@@ -44,7 +44,7 @@
 	<% @beers.each do |beer| %>
 		<div class="review-container">
 			<div class="review">
-				<div class="beers"><%= link_to beer.name.upcase, beer_path(beer) %></div>
+				<div class="beers"><%= link_to beer.name.upcase, beer_path(beer), class: "links" %></div>
 				<br/>
 					<div class="l1">
 					Brewery:<br/>
@@ -63,7 +63,7 @@
 					<span class="b3"><%= beer.appearance %><br/></span><br/>
 					<br/>
 					</div class="links b3">
-					<%= link_to 'REVISE', edit_beer_path(beer) %> | <%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %>
+					<%= link_to 'REVISE', edit_beer_path(beer), class: "links" %> | <%= link_to "✖", beer, method: :delete, data: { confirm: "Are you sure?"},class: "links" %>
 			</div>
 		</div>
 		<% end %>
@@ -86,7 +86,7 @@
 	<div class="showtable"><br/>
 		<div class="b5"> Welcome to Kanpai! <br/> A web app for the craft beer enthusiast.
 		</div><br/>
-		<div class="b4a"><%= link_to "LOGIN", login_path %> | <%= link_to "SIGN UP", signup_path %></div>
+		<div class="b4a"><%= link_to "LOGIN", login_path, class: "links" %> | <%= link_to "SIGN UP", signup_path, class: "links" %></div>
 		<div class="logo"><img src="<%= asset_path('KANPAI_APP_LOGO_COMP-1a.svg') %>" alt="KANPAI!"></div>
 
 	</div>

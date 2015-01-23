@@ -1,5 +1,4 @@
-<div class="b2 form-btn"><%= link_to "BACK", beers_path %>
-</div>
+<div class="b2 form-btn"><%= link_to "BACK", beers_path, class: "links" %></div>
 
 <div class="section-head">SIGN UP</div>
 
@@ -17,11 +16,10 @@
 				Email: <%= f.text_field :email %>
 				Password <%= f.password_field :password %> 
 				Confirm <%= f.password_field :password_confirmation %>
-			<span class="b2"><%= f.submit "SIGN UP" %></span>
-		</div>
-	
+				<span class="b2"><%= f.submit "SIGN UP" %></span>
+			</div>
 
-<% end %>
+	<% end %>
 
 <% flash.each do |key, value| %>
   <br/><div class='b4a alert-<%= key %>' role='danger'>
