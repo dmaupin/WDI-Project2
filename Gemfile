@@ -38,6 +38,8 @@ gem 'mini_magick' # for post-upload image processing
 
 gem "figaro"
 
+gem 'rails_12factor', group: :production
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
