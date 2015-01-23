@@ -23,11 +23,23 @@
 				<%= f.number_field :price %><br/>
 				Taste:<br/> 
 				<%= f.text_field :taste %><br/>
-				Apperance:<br/> 
-				<%= f.text_field :appearance %><br/>
+				Color:<br/> 
+				<%= f.color_field :color, list: "colors", placeholder: "#ffeaa5" %><br/>
 				<br/> 
-				<%= f.file_field :photo, class: "" %></div><br/>
-				<div><%= f.submit "Update", class: "l1" %></div>
+				<%= f.file_field :photo %></div><br/>
+				<div><%= f.submit "Update", class: "l1"%></div>
+					<datalist id=colors>
+						<option>#ffeaa5</option>
+						<option>#efc784</option>
+						<option>#f5b65d</option>
+						<option>#e69943</option>
+						<option>#d28d44</option>
+						<option>#ce6f2b</option>
+						<option>#ce4c36</option>
+						<option>#653615</option>
+						<option>#5f332a</option>
+						<option>#261408</option>
+					</datalist>
 				<% end %>				
 			</div>
 

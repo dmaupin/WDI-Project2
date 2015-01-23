@@ -7,6 +7,7 @@ class Beer
   field :price, type: Float
   field :taste, type: String
   field :appearance, type: String
+  field :color, type: String
   field :rating, type: Integer
   field :ABV, type: Float
   mount_uploader :photo, OurImageUploader
