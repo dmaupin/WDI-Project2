@@ -1,3 +1,4 @@
+<% if !current_user.nil? %>
 
 <!-- Section 1 - Wish List -->
 
@@ -26,7 +27,7 @@
 			<div class="wishlist-text l2"><%= beer.style %></div>
 			<div class="wishlist-btn l2"></div>
 			<div class="wishlist-btn l2"><%= link_to "X", beer, method: :delete, data: { confirm: "Are you sure?"} %></div>
-		<div class="wishlist-btn l2"><%= link_to "✎", edit_beer_path(beer) %></div>
+			<div class="wishlist-btn l2"><%= link_to "✎", edit_beer_path(beer) %></div>
 	</div>
 <% end %>
 
@@ -74,7 +75,20 @@
 	
 	<br/><br/><br/><br/>
 		
+<% else %>
 
+<br/>
+
+	<hr class="divider-horizontal"/>
+
+	<div class="showtable"><br/>
+		<div class="b5"> Welcome to<br/>
+			<span class="b6">KANPAI!</span><br/>
+			A web app for the beer enthusist.
+		</div><br/>
+		<div class="b5"><%= link_to "SIGN UP NOW", signup_path %></div>
+	</div>
+<% end %>
 
 
 

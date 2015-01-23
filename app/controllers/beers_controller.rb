@@ -2,8 +2,10 @@ class BeersController < ApplicationController
 
   # before_action :authorize
 
-	  def index
-      @beers = Beer.all.order(created_at: :desc)
+    def index
+      if current_user
+        @beers = current_user.beers.all.order(created_at: :desc)
+      end
     end
 
     def new
@@ -11,10 +13,10 @@ class BeersController < ApplicationController
     end
 
     def create
-      # @user = User.find(params[:user_id])
+      # @user = User.find(params[:user_id]) - w/o login
 
       @beer = current_user.beers.new(beer_params)
-      # current_user.beers = Beer.new(beer_params)
+
 
       if @beer.save
         redirect_to beers_path
@@ -24,16 +26,16 @@ class BeersController < ApplicationController
     end
 
     def show
-      @beer = Beer.find(params[:id])
+      @beer = current_user.beers.find(params[:id])
     end
 
     def edit
-      @beer = Beer.find(params[:id])    
+      @beer = current_user.beers.find(params[:id])    
     end
 
     def update
-      @beer = Beer.find(params[:id])
-      if @beer.update(beer_params)
+      @beer = current_user.beers.find(params[:id])
+      if current_user.beers.update(beer_params)
       redirect_to beers_path
       else
       render :edit
@@ -41,7 +43,7 @@ class BeersController < ApplicationController
     end
 
     def destroy
-      @beer = Beer.find(params[:id])
+      @beer = current_user.beers.find(params[:id])
       @beer.destroy
       redirect_to beers_path
     end
