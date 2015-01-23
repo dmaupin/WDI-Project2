@@ -13,11 +13,7 @@ class BeersController < ApplicationController
     end
 
     def create
-      # @user = User.find(params[:user_id]) - w/o login
-
       @beer = current_user.beers.new(beer_params)
-
-
       if @beer.save
         redirect_to beers_path
       else

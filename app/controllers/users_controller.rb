@@ -5,13 +5,17 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation))
+		@user = User.new(user_params)
 
 		if @user.save
 			redirect_to beers_path
 		else
-			render :login
+			redirect_to :signup
 		end
+	end
+
+	def user_params
+		params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
 	end
 
 end
