@@ -21,25 +21,32 @@ body {
 
 // nanami
 
-	@font-face {
-		font-family: 'Nanami-Bold';
-		src: font-url('webfonts/2D14BF_0_0.eot');
-		src: font-url('webfonts/2D14BF_0_0.eot?#iefix') format('embedded-opentype'),font-url('webfonts/2D14BF_0_0.woff2') format('woff2'),font-url('webfonts/2D14BF_0_0.woff') format('woff'),font-url('webfonts/2D14BF_0_0.ttf') format('truetype');
-	}
-	 
-	  
-	@font-face {
-		font-family: 'Nanami-Book';
-		src: font-url('webfonts/2D14BF_1_0.eot');
-		src: font-url('webfonts/2D14BF_1_0.eot?#iefix') format('embedded-opentype'),font-url('webfonts/2D14BF_1_0.woff2') format('woff2'),font-url('webfonts/2D14BF_1_0.woff') format('woff'),font-url('webfonts/2D14BF_1_0.ttf') format('truetype');
-	}
-	 
-	  
-	@font-face {
-		font-family: 'Nanami-Light';
-		src: font-url('webfonts/2D14BF_2_0.eot');
-		src: font-url('webfonts/2D14BF_2_0.eot?#iefix') format('embedded-opentype'),font-url('webfonts/2D14BF_2_0.woff2') format('woff2'),font-url('webfonts/2D14BF_2_0.woff') format('woff'),font-url('webfonts/2D14BF_2_0.ttf') format('truetype');
-	}
+@font-face {
+	font-family: 'Nanami-Bold'; //http:www.davidmaupin.com//wdi/pj2/
+	src: font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.eot');
+	src: font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.eot?#iefix') format('embedded-opentype'),
+			 font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.woff2') format('woff2'),
+			 font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.woff') format('woff'),
+			 font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Nanami-Book';
+	src: font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.eot');
+	src: font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.eot?#iefix') format('embedded-opentype'),
+	     font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.woff2') format('woff2'),
+	     font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.woff') format('woff'),
+	     font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.ttf') format('truetype');
+}
+  
+@font-face {
+	font-family: 'Nanami-Light';
+	src: font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.eot');
+	src: font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.eot?#iefix') format('embedded-opentype'),
+	     font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.woff2') format('woff2'),
+	     font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.woff') format('woff'),
+	     font-url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.ttf') format('truetype');
+}
 
 
 // typography
