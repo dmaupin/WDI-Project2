@@ -19,27 +19,34 @@ body {
 
 // fonts
 
-	// nanami
+// nanami
 
-	@font-face {
-		font-family: 'Nanami-Bold'; //http:www.davidmaupin.com//wdi/pj2/
-		src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.eot');
-		src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.eot?#iefix') format('embedded-opentype'),url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.woff2') format('woff2'),url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.woff') format('woff'),url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.ttf') format('truetype');
-	}
-	 
-	  
-	@font-face {
-		font-family: 'Nanami-Book';
-		src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.eot');
-		src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.eot?#iefix') format('embedded-opentype'),url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.woff2') format('woff2'),url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.woff') format('woff'),url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.ttf') format('truetype');
-	}
-	 
-	  
-	@font-face {
-		font-family: 'Nanami-Light';
-		src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.eot');
-		src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.eot?#iefix') format('embedded-opentype'),url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.woff2') format('woff2'),url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.woff') format('woff'),url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.ttf') format('truetype');
-	}
+@font-face {
+	font-family: 'Nanami-Bold'; //http:www.davidmaupin.com//wdi/pj2/
+	src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.eot');
+	src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.eot?#iefix') format('embedded-opentype'),
+			 url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.woff2') format('woff2'),
+			 url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.woff') format('woff'),
+			 url('https://s3.amazonaws.com/kanpai-assets/2D14BF_0_0.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Nanami-Book';
+	src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.eot');
+	src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.eot?#iefix') format('embedded-opentype'),
+	     url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.woff2') format('woff2'),
+	     url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.woff') format('woff'),
+	     url('https://s3.amazonaws.com/kanpai-assets/2D14BF_1_0.ttf') format('truetype');
+}
+  
+@font-face {
+	font-family: 'Nanami-Light';
+	src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.eot');
+	src: url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.eot?#iefix') format('embedded-opentype'),
+	     url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.woff2') format('woff2'),
+	     url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.woff') format('woff'),
+	     url('https://s3.amazonaws.com/kanpai-assets/2D14BF_2_0.ttf') format('truetype');
+}
 
 
 // typography
