@@ -23,22 +23,22 @@ body {
 
 	@font-face {
 		font-family: 'Nanami-Bold';
-		src: asset-url('webfonts/2D14BF_0_0.eot');
-		src: asset-url('webfonts/2D14BF_0_0.eot?#iefix') format('embedded-opentype'),asset-url('webfonts/2D14BF_0_0.woff2') format('woff2'),asset-url('webfonts/2D14BF_0_0.woff') format('woff'),asset-url('webfonts/2D14BF_0_0.ttf') format('truetype');
+		src: font-url('webfonts/2D14BF_0_0.eot');
+		src: font-url('webfonts/2D14BF_0_0.eot?#iefix') format('embedded-opentype'),font-url('webfonts/2D14BF_0_0.woff2') format('woff2'),font-url('webfonts/2D14BF_0_0.woff') format('woff'),font-url('webfonts/2D14BF_0_0.ttf') format('truetype');
 	}
 	 
 	  
 	@font-face {
 		font-family: 'Nanami-Book';
-		src: asset-url('webfonts/2D14BF_1_0.eot');
-		src: asset-url('webfonts/2D14BF_1_0.eot?#iefix') format('embedded-opentype'),asset-url('webfonts/2D14BF_1_0.woff2') format('woff2'),asset-url('webfonts/2D14BF_1_0.woff') format('woff'),asset-url('webfonts/2D14BF_1_0.ttf') format('truetype');
+		src: font-url('webfonts/2D14BF_1_0.eot');
+		src: font-url('webfonts/2D14BF_1_0.eot?#iefix') format('embedded-opentype'),font-url('webfonts/2D14BF_1_0.woff2') format('woff2'),font-url('webfonts/2D14BF_1_0.woff') format('woff'),font-url('webfonts/2D14BF_1_0.ttf') format('truetype');
 	}
 	 
 	  
 	@font-face {
 		font-family: 'Nanami-Light';
-		src: asset-url('webfonts/2D14BF_2_0.eot');
-		src: asset-url('webfonts/2D14BF_2_0.eot?#iefix') format('embedded-opentype'),asset-url('webfonts/2D14BF_2_0.woff2') format('woff2'),asset-url('webfonts/2D14BF_2_0.woff') format('woff'),asset-url('webfonts/2D14BF_2_0.ttf') format('truetype');
+		src: font-url('webfonts/2D14BF_2_0.eot');
+		src: font-url('webfonts/2D14BF_2_0.eot?#iefix') format('embedded-opentype'),font-url('webfonts/2D14BF_2_0.woff2') format('woff2'),font-url('webfonts/2D14BF_2_0.woff') format('woff'),font-url('webfonts/2D14BF_2_0.ttf') format('truetype');
 	}
 
 
@@ -120,7 +120,7 @@ link {
 	display: inline;
 	user-select: none;
 	transition: .2s;
-	color: #1c478d;
+	color: #8a7552;
 }
 
 .button {
