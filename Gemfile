@@ -40,6 +40,8 @@ gem "figaro"
 
 gem 'rails_12factor', group: :production
 
+gem "will_paginate_mongoid"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
