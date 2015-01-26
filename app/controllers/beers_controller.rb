@@ -5,7 +5,7 @@ class BeersController < ApplicationController
     def index
       if current_user
         # @beers = current_user.beers.all
-        @beers = current_user.beers.paginate(:page => params[:page], :per_page => 6)
+        @beers = current_user.beers.all.order(created_at: :desc).paginate(:page => params[:page], :per_page => 6)
       end
     end
 
