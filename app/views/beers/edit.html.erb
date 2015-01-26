@@ -12,20 +12,27 @@
 			<br/>
 			<div class="l1">
 				Brewery:<br/> 
-				<%= f.text_field :brewery  %><br/>
+				<%= f.text_field :brewery, placeholder: "Brewery", size: "25px" %><br/>
 				Style:<br/>
-				<%= f.text_field :style  %><br/>
+				<%= f.text_field :style, placeholder: "Style", size: "25px" %><br/>
 				ABV:<br/> 
-				<%= f.number_field :ABV %><br/>
+				<%= f.number_field :ABV, placeholder: "ABV", size: "25px" %><br/>
 				Rating:<br/> 
-				<%= f.number_field :rating %><br/>
+				<%= f.number_field :rating, placeholder: "(1-10)", size: "25px" %><br/>
 				Price:<br/> 
-				<%= f.number_field :price %><br/>
+				<%= f.number_field :price, placeholder: "Price", size: "25px" %><br/>
 				Taste:<br/> 
-				<%= f.text_field :taste %><br/>
-				Color:<br/> 
+				<%= f.text_field :taste, list: "tastes", placeholder: "flavor", size: "25px" %><br/>
+				<datalist id=tastes>
+						<option>Dry</option>
+						<option>Hoppy</option>
+						<option>Sour</option>
+						<option>Sweet</option>
+						<option>Crisp</option>
+					</datalist>
+				<br/>Color:
 				<%= f.color_field :color, list: "colors", placeholder: "#ffeaa5" %><br/>
-				<br/> 
+				<br/>Label Photo:<br/>  
 				<%= f.file_field :photo %></div><br/>
 				<div><%= f.submit "Update", class: "l1"%></div>
 					<datalist id=colors>
